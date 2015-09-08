@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% load custom_filters %}
+
+{% block content %}
+
+<p><b>Ejemplo de Etiqueta personalizada</b></p>
+<p>{% fecha_actual %}</p>
+<p><b>Ejemplo de Filtro incorporado en Django:</b></p>
+<p>Con dos decimales {{ monto|floatformat:2 }}</p>
+<p><b>Ejemplo de Filtro personalizado:</b></p>
+<p>En dólares y dos decimales {{ monto|floatformat:2|dollar }}</p>
+
+{% endblock %}
+
+
+{% block footer %}
+{% endblock %}

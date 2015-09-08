@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load custom_filters %}
+
+
+{% block content %}
+
+<p><b>Ejemplo de Etiqueta personalizada</b></p>
+<p>{% fecha_actual %}</p>
+<p><b>Ejemplo de Filtro personalizado # 1:</b></p>
+<p>Con dos decimales {{ mi_fecha|adjust:"months=1"|date:"Y/m/d" }}</p>
+<p><b>Ejemplo de Filtro personalizado # 2:</b></p>
+<p>En dólares y dos decimales {{ mi_fecha|adjust:"weeks=-1"|date:"Y/m/d" }}</p>
+<p>{{ mi_fecha|adjust:"years=1, months=2"|date:"Y/m/d" }}</p>
+{% comment "Optional note" %}
+    <p>Commented out text with {{ create_date|date:"c" }}</p>
+{% endcomment %}
+
+{% endblock %}
+
+{% block footer %}
+<h2>Pie de pagina del DateAdjuster</h2>
+{% endblock %}

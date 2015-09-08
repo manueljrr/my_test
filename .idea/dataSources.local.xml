@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Django default" uuid="a5e9210a-1d33-4fd5-94cd-48a1136b6b2a">
+      <user-name>root</user-name>
+      <schema-pattern>practica.*</schema-pattern>
+      <default-schemas>practica.*</default-schemas>
+    </data-source>
+  </component>
+</project>

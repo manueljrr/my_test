@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <table border="1">
+        <tr>
+            <td>Nombre:</td>
+            <td>{{ name }}</td>
+        </tr>
+        <tr>
+            <td>Apellido:</td>
+            <td>{{ surname }}</td>
+        </tr>
+        <tr>
+            <td>Ciudad:</td>
+            <td>{{ city }}</td>
+        </tr>
+        <tr>
+            <td>Pais:</td>
+            <td>{{ country }}</td>
+        </tr>
+        <tr>
+            <td>Codigo Postal</td>
+            <td>{{ zipcode }}</td>
+        </tr>
+    </table>
+
+    Formulario
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                Ingrese los datos del producto
+            </div>
+            <div class="col-md-4">
+                {% crispy form %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+<h2>Pie de pagina de la tabla</h2>
+{% endblock %}
